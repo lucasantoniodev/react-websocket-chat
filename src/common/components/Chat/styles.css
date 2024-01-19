@@ -1,0 +1,118 @@
+/* Estilos gerais da caixa de chat */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 250, 250);
+    padding: 16px;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 600px;
+    max-height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.984);
+    border-radius: 12px;
+    box-sizing: border-box;
+    /* Garante que padding e border não aumentem o tamanho total */
+}
+
+.label-user-register {
+    margin-bottom: 10px;
+}
+
+/* Estilos da caixa de entrada de mensagem */
+
+input {
+    color: white;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: rgb(71, 70, 70);
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Garante que padding e border não aumentem o tamanho total */
+}
+
+input::placeholder {
+    color: white;
+}
+
+.box-message {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box-message {
+    width: 90%;
+}
+
+.input-box-message>input {
+    min-height: 60px;
+}
+
+.button-box-message {
+    display: flex;
+    width: 10%;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Estilos da caixa de mensagens */
+.message-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    max-height: 80%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(71, 70, 70);
+    border-radius: 12px;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* Garante que padding e border não aumentem o tamanho total */
+}
+
+/* Estilos das mensagens do usuário e do convidado */
+.user-message-box,
+.guest-message-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    /* Limita a largura máxima das mensagens para evitar que ocupem toda a largura */
+    margin: 8px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow-wrap: break-word;
+    /* Permite que palavras longas quebrem para a próxima linha */
+}
+
+/* Estilos específicos para mensagens do usuário */
+.user-message-box {
+    align-self: flex-start;
+    background-color: blue;
+    border-radius: 8px 8px 8px 0;
+}
+
+/* Estilos específicos para mensagens do convidado */
+.guest-message-box {
+    align-self: flex-end;
+    background-color: green;
+    border-radius: 8px 8px 0 8px;
+}
+
+.box-total-messages {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    appearance: none;
+    width: 0;
+}
